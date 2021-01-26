@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-const SunAndMoon = () =>  {
+const Login = () =>  {
 
     const [imageSrc,imageSrcUpdate] = useState('/assets/img/moon.png');
 
@@ -25,4 +25,4 @@ const SunAndMoon = () =>  {
     )
 }
 
-export default SunAndMoon;
+export default Login;
