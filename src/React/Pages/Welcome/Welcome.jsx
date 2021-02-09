@@ -12,7 +12,10 @@ const Welcome = () => {
             <h1>Welcome</h1>
 
             {/* <Slideshow /> */}
+            <div className = "nested">
             <Tabbed />
+            </div>
+            
             <Staff />
         </div>
     );

@@ -7,9 +7,10 @@ const TabbedNav = ({changeTabs,tabItems,chosenTab}) => {
     console.log('TabbedNavItem', tabItems );
 
     return (
+        
         <TabbedNavStyled className='TabbedNav'>
            {
-            tabItems.map((tabItem, idx) =>  {
+            tabItems.map( (tabItem, idx) =>  {
                return <TabbedNavItem 
                         key = { idx }
                         tabItem = {tabItem}

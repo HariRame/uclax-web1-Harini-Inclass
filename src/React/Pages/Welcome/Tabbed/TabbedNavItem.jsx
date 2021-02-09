@@ -6,7 +6,8 @@ const TabbedNavItem = ({tabItem,changeTabs,chosenTab}) => {
     
     console.log('tabItem',tabItem.title, chosenTab.title);
 
-    const nandleTabClick =() => {
+    const handleTabClick =() => {
+        console.log('Clicked tab', tabItem.title);
         changeTabs(tabItem);
     }
 
@@ -17,8 +18,8 @@ const TabbedNavItem = ({tabItem,changeTabs,chosenTab}) => {
 
     return (
         <TabbedNavItemStyled 
-            className='theClassName'
-            onClick = {nandleTabClick} > 
+            className={theClassName}
+            onClick = {handleTabClick} > 
             
             {tabItem.title}
         </TabbedNavItemStyled>
