@@ -16,7 +16,9 @@ import NavMobile from './Nav/NavMobile.jsx'
 const Container = () => {
 
     const { isSmall} = useMediaQuery();
+    console.log("isSmall is", isSmall) 
     return(
+        
         <BrowserRouter> 
         
          
@@ -24,10 +26,12 @@ const Container = () => {
             
             <Header/>
              {
+                
                 isSmall
                ? <NavMobile/>
                : <NavLarge/>
              }
+             
             <Main/>
             
             <Footer/>
