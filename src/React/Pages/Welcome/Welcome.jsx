@@ -4,7 +4,7 @@ import React from 'react'
 
 /*import Slideshow from './Slideshow.jsx'*/
 import Tabbed from './Tabbed/Tabbed.jsx'
-import Staff from './Staff.jsx'
+import Staff from '../Staff/Staff.jsx'
 
 const Welcome = () => {
     return(
@@ -13,10 +13,12 @@ const Welcome = () => {
 
             {/* <Slideshow /> */}
             <div className = "nested">
-            <Tabbed />
+              <Tabbed />
+            </div>
+            <div className = "nested">
+              <Staff />
             </div>
             
-            <Staff />
         </div>
     );
 }

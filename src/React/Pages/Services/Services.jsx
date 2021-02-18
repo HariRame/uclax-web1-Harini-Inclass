@@ -1,7 +1,7 @@
 import React from 'react'
 
-import FilterNav from './FilterNav'
-import Gallery from './Gallery'
+import FilterNav from './FilterNav/FilterNav'
+import Gallery from './Gallery/Gallery'
 
 const Services = () => {
     return(
