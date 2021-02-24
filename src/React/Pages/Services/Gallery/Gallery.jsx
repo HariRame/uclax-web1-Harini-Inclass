@@ -1,14 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import GalleryItem from './GalleryItem'
+import GalleryItem from './GalleryItem.jsx'
 
-const Gallery = () => {
+const Gallery = ({ services, catChosen }) => {
+
+    console.log('Gallery services', services, catChosen);
 
     return (
         <GalleryStyled className='Gallery'>
-            Gallery 
-            <GalleryItem />
+            {
+                services.packages
+                
+                .filter((item) => {
+                    return (catChosen === "All" || item.category === catChosen)
+                })
+                
+                .map ((item, idx) => {
+                    return <GalleryItem key = {idx} item = {item}/>
+                } )
+            }
+             
+            
         </GalleryStyled>
     );
 }
@@ -16,5 +29,8 @@ const Gallery = () => {
 export default Gallery;
 
 const GalleryStyled = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
     
 `;
