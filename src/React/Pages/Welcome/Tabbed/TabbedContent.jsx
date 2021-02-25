@@ -10,7 +10,7 @@ const TabbedContent = ({chosenTab}) => {
     return (
         <TabbedContentStyled className='TabbedContent'>
             <div className = "left">
-            <img src = { chosenTab.image } alt = 'Tab Image' />
+            <img src = { chosenTab.image } alt = 'Tab' />
             </div>
             <div className = "right" >
             <h3>{chosenTab.title}</h3>

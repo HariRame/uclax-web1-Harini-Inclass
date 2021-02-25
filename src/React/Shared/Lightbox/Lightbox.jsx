@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Light from './Light'
-const Lightbox = () => {
+import Light from './Light.jsx'
+const Lightbox = ({show, onHide, children, width = '340px'}) => {
+
+    if(!show) { return '';}
 
     return (
-        <LightboxStyled className='Lightbox'>
-               <Light />
+        <LightboxStyled className='Lightbox' onClick={ onHide }>
+            <Light onHide = {onHide} width = {width}>
+                { children }
+            </Light>
         </LightboxStyled>
     );
 }
@@ -14,5 +18,12 @@ const Lightbox = () => {
 export default Lightbox;
 
 const LightboxStyled = styled.div`
-    
+    background-color: rgba(0,0,0,0.75);
+    position: fixed;
+    left: 0px;
+    top:0px;
+    bottom: 0px;
+    right: 0px;
+     
+    z-index: 1000;
 `;

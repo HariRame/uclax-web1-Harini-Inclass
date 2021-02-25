@@ -7,13 +7,19 @@ import {services} from './servicesData.js'
 
 const Services = () => {
     
-    const [catChosen, catChosenUpdate] = useState('Ammenities');
+    const [catChosen, catChosenUpdate] = useState('All');
     console.log('catChosen', catChosen);
     return(
         <div>
             <h1>Services</h1>
-            <FilterNav services ={ services }  catChosen = {catChosen}/>
-            <Gallery services = { services } catChosen = {catChosen} />
+            <FilterNav services ={ services }  
+            catChosen = {catChosen}
+            catChosenUpdate = { catChosenUpdate}
+            />
+            <Gallery services = { services } 
+            catChosen = {catChosen} 
+            
+            />
         </div>
     );
 }
