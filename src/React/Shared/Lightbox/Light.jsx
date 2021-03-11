@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
-<FontAwesomeIcon icon={ faTimes } />
+{/* <FontAwesomeIcon icon={ faTimes } /> */}
 
 const Light = ({onHide,width,children}) => {
 
@@ -13,8 +13,6 @@ const Light = ({onHide,width,children}) => {
 
     event.stopPropagation();
   }
-
-  
 
     return (
         <LightStyled 
@@ -38,7 +36,7 @@ const LightStyled = styled.div`
   padding: 20px;
   position: absolute;
   
-width: ${({width}) => width};
+  width: ${({width}) => width};
 
   left: 50%;
   top: 50%;
@@ -57,7 +55,7 @@ width: ${({width}) => width};
 
     position:absolute;
     right: -10px;
-    top: --10px;
+    top: -10px;
 
   }
   
